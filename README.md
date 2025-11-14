@@ -158,4 +158,4 @@ Only numerical bass values influence the synthetic output and the visualisation.
 
 ## License
 
-MIT License (optional placeholder)
+MIT License

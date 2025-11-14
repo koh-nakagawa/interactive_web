@@ -43,8 +43,8 @@ Processing で視覚エフェクトを描画します
 ## 必要環境
 
 * macOS Apple Silicon 推奨  
-* Python 三系  
-* Processing 四系  
+* Python 
+* Processing
 * PyAudio、NumPy、python OSC  
 * USB マイクまたは内蔵マイク  
 * 内蔵スピーカーまたは外部スピーカー  
@@ -122,8 +122,6 @@ python audio_engine.py --input 0 --output 1 --threshold 0.002
 2. `interactive_web/processing` を開く  
 3. `interactive_web.pde` を実行  
 
-Processing はポート五千五で OSC を受信します。
-
 ---
 
 ## ビジュアルの動作
@@ -134,7 +132,7 @@ Processing はポート五千五で OSC を受信します。
 * 画面外に出ると自動で消える  
 * 音が連続すると複数同時に円が存在  
 
-クモ網への投影で「振動の波紋」を表現できます。
+クモ網への投影で「振動の波紋」を表現
 
 ---
 
@@ -152,7 +150,7 @@ Processing はポート五千五で OSC を受信します。
 ### 円が出ない  
 * threshold を下げる  
 * audio_engine.py が起動しているか確認  
-* OSC ポート五千五が競合していないか確認  
+* OSC ポートが競合していないか確認  
 
 ### 常に円が出続ける  
 * threshold を上げる  
@@ -166,4 +164,4 @@ Processing はポート五千五で OSC を受信します。
 
 ## ライセンス
 
-MIT License（必要に応じて変更可能）
+MIT License
