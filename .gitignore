@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Processing
+processing/*/application*
+processing/*/applet*
+processing/*/libraries/
+processing/*/*.class
+

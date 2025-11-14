@@ -1,0 +1,10 @@
+python device.py
+
+# 例えば下記
+0: MacBook Airのマイク | IN: 1 | OUT: 0
+1: MacBook Airのスピーカー | IN: 0 | OUT: 2
+
+python audio_engine.py --input 0 --output 1
+
+# threshold指定
+python audio_engine.py --input 0 --output 1 --threshold 0.001
