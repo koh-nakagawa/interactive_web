@@ -104,10 +104,29 @@ Syntax
 python audio_engine.py --input INPUT_INDEX --output OUTPUT_INDEX --threshold THRESHOLD_VALUE
 ```
 
+Options
+
+- input
+  Index of the microphone device
+
+- output
+  Index of the speaker device
+
+- threshold
+  Bass value required to trigger ripple creation
+
+- freq
+  Frequency of the synthetic bass in Hertz
+  Default is 80 (Hz)
+
+- gain
+  Output amplitude multiplier for the synthetic bass
+  Default is 1
+
 Example
 
 ```
-python audio_engine.py --input 0 --output 1 --threshold 0.002
+python audio_engine.py --input 0 --output 1 --threshold 0.002 --freq 100 --gain 2.0
 ```
 
 ---
@@ -134,8 +153,9 @@ Processing listens for OSC messages on port 5005.
 
 ## Avoiding Acoustic Feedback
 
-The system uses synthetic bass rather than the microphone signal to prevent feedback.  
-Only numerical bass values influence the synthetic output and the visualisation.
+The system uses synthetic bass rather than directly amplifying microphone audio.
+This prevents acoustic feedback even when microphone and speakers are close.
+Only numerical bass values influence sound output and visualisation.
 
 ---
 

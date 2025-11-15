@@ -17,6 +17,8 @@ Processing で視覚エフェクトを描画します
 * 低音に合わせて円が中央から外に広がるビジュアル  
 * マイクごとに異なる特性に対応するため閾値をコマンドで調整可能  
 * 入出力デバイスもコマンドラインで指定可能  
+* 合成低音の周波数を freq で調整可能  (NEW)
+* 合成低音の出力音量を gain で調整可能  (NEW)
 
 ---
 
@@ -30,6 +32,8 @@ Processing で視覚エフェクトを描画します
 * 合成低音（80Hz 別にリファレンスとかコンセプチュアルな意義はない）を生成して出力  
 * 処理した低音値を Processing に OSC 送信  
 * 起動時にデバイス番号と閾値を指定可能  
+* 合成低音の周波数と音量をユーザーが指定可能  (NEW)
+
 
 ### Processing Visual Engine  
 * OSC で bass 値を受信  
@@ -105,6 +109,25 @@ python device.py
 ```
 python audio_engine.py --input 入力デバイス番号 --output 出力デバイス番号 --threshold 閾値
 ```
+
+Options
+
+- input
+  Index of the microphone device
+
+- output
+  Index of the speaker device
+
+- threshold
+  Bass value required to trigger ripple creation
+
+- freq
+  Frequency of the synthetic bass in Hertz
+  Default is 80 (Hz)
+
+- gain
+  Output amplitude multiplier for the synthetic bass
+  Default is 1
 
 ### 例
 
